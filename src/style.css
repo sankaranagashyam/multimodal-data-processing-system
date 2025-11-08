@@ -1,0 +1,222 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* === SnapPod AI Dark Neon Background === */
+body {
+  background: linear-gradient(135deg, #120122, #22014a);
+  background-attachment: fixed;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  overflow-x: hidden;
+}
+
+/* === Main Container === */
+.container {
+  width: 90%;
+  max-width: 950px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  padding: 45px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 0 40px rgba(153, 0, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 60px rgba(153, 0, 255, 0.25);
+}
+
+/* === Gradient Headings === */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #00d2ff, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #b59eff;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* === Upload Section === */
+.upload-section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.upload-section:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.upload-section input[type="file"],
+.upload-section input[type="text"] {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 12px;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+.upload-section input[type="file"]::file-selector-button {
+  background: linear-gradient(90deg, #00d2ff, #f107a3);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.upload-section input[type="file"]::file-selector-button:hover {
+  background: linear-gradient(90deg, #42e4ff, #ff52c1);
+}
+
+.upload-section input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 12px rgba(255, 0, 180, 0.5);
+}
+
+/* === Gradient Button === */
+.upload-section button {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #00d2ff, #f107a3);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(241, 7, 163, 0.5);
+}
+
+.upload-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.8);
+}
+
+/* === Query Section === */
+.query-section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 18px;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+
+.query-section:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  resize: none;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+textarea::placeholder {
+  color: #d8d8ff;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+}
+
+/* === Search Input === */
+input[type="search"] {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+input[type="search"]:focus {
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+}
+
+input::placeholder {
+  color: #c8d8ff;
+  opacity: 1;
+  font-style: italic;
+}
+
+input:focus::placeholder {
+  color: #9ecfff;
+}
+
+/* === Status Section === */
+.status {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(0, 255, 200, 0.15);
+  border-left: 5px solid #00d2ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 255, 200, 0.15);
+}
+
+.status p {
+  color: #bfffee;
+  font-weight: 500;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7b2ff7, #f107a3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
